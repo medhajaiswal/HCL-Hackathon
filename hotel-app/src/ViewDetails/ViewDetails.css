@@ -1,0 +1,24 @@
+.MainContianer{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+ 
+}
+.HotelNameContainer{
+    text-align: center;
+     color:#8B008B;
+}
+.ImageContainer{
+    align-items: center;
+}
+.SubContainer{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    height: 100px;
+}
+.AddressContainer{
+    display:flex;
+    flex:1;
+    margin-top:5%;
+}
