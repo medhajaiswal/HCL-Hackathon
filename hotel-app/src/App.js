@@ -26,7 +26,7 @@ class App extends Component {
          <SearchItems getHotelList={this.getHotelList}/>
          {
            city !== "" && price !== "" && star !== "" 
-           ? <ListHotel /> 
+           ? <ListHotel city={city} price={price} star={star}/> 
            : ""
          }
       </div>
