@@ -1,31 +1,62 @@
-import react from "react";
+import React from "react";
 import data from "./data";
+import './style.css';
+import { Button,Row,Col } from "react-bootstrap";
+
 class ListHotel extends React.Component {
-constructor(){
-    super(props);
-    this.state= {
-        HotelName:'',
-        Rating:'',
-        Address:''
+    constructor(props) {
+        super(props);
+        this.state = {
+            HotelName: '',
+            Rating: '',
+            Address: '',
+            data: data
+        }
+
     }
-
-}
-render(){
-    return (
-        <div>
-            <div className="hotel-image">
-                <img src="" alt="HotelImage"/>
-            </div>
-            <ul>
-                {
-                    
-                }
-                <li>
-
+    render() {
+        const { data } = this.state
+        const sidebar = (
+            <ul className="hotel-image">
+              {data.map((value) =>
+                <li key={value.id}>
+                <img src={value.img} className="hotel-logo"/>
                 </li>
+              )}
             </ul>
-        </div>
-    )
-}
+          );
+          const content = data.map((data) =>
+          <div key={data.id} className="hotel-details">
+            <p>{data.HotelName}</p>
+            <p>{data.Address}</p>
+          </div>
+        );
+        return (
+            <div className="Container">
+                 <Row>
+                         <Col> {sidebar}</Col>
+                      <Col>{content}</Col>
+                          <Col>
+                          <Button variant="secondary" size="lg">
+                        View Details
+                     </Button>
+                     <Button variant="secondary" size="lg">
+                       Book Now
+                     </Button> </Col>
+                    
+  </Row>
+                {/* <div>
+                {sidebar}
+                <span> {content}</span>
+                </div>
+                
+                <div className="">
+                    <Button variant="secondary" size="lg">
+                        View Details
+                     </Button>
+                </div> */}
+            </div>
+        )
+    }
 }
 export default ListHotel;
