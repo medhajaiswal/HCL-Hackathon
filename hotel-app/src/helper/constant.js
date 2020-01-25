@@ -1,0 +1,1 @@
+export const SEARCH_PLACEHOLDER = "Enter city to search hotel";
