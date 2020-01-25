@@ -19,7 +19,7 @@ function ViewDetails(props) {
          
           </div>
           <div className="SubContainer">
-              <div style={{display:"flex",flex:1,marginTop:'5%'}}>
+              <div style={{display:"flex",flex:1,marginTop:'5%',marginLeft:50}}>
                  <GoogleApiWrapper lat={props.lng} lng={props.lng}/>
               </div>
               <div style={{display:"flex",flex:0.5}}>
