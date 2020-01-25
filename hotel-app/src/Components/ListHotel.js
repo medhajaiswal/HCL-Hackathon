@@ -16,7 +16,7 @@ class ListHotel extends React.Component {
     }
     render() {
         let { data } = this.state
-        let {city, price, star} = this.props;
+        let {city, price, star} = this.props;        
 
         const sidebar = (
             <ul className="hotel-image">
