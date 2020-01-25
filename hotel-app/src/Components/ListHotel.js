@@ -18,9 +18,9 @@ class ListHotel extends React.Component {
         const { data } = this.state
         const sidebar = (
             <ul className="hotel-image">
-              {data.map((value) =>
-                <li key={value.id}>
-                <img src={value.img} className="hotel-logo"/>
+              {data.map((value, index) =>
+                <li key={index}>
+                <img src={value.img} className="hotel-logo" alt={value.HotelName}/>
                 </li>
               )}
             </ul>

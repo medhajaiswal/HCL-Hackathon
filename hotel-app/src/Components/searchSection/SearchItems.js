@@ -60,6 +60,7 @@ export const SearchItems = () => {
                         <Form.Label>{constant.PRICE_RANGE}</Form.Label>
                         <Form.Control type="range" min="500" max="10000"  value={price} 
                         onChange={(event) => handlePriceField(event)}/>
+                        <span id="output">{price}</span>
                     </Form.Group>
                 </Form.Row>
                 
