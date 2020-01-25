@@ -1,17 +1,14 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import {Header} from './Components/header/Header';
+import { SearchItems } from './Components/searchSection/SearchItems';
 import ListHotel from './Components/ListHotel';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <header className="">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      </header>
-      <ListHotel/>
+       <Header/>
+       <SearchItems/>
+       <ListHotel/>
     </div>
   );
 }
-
-export default App;
