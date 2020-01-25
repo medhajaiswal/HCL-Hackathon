@@ -15,7 +15,9 @@ class ListHotel extends React.Component {
 
     }
     render() {
-        const { data } = this.state
+        let { data } = this.state
+        let {city, price, star} = this.props;
+
         const sidebar = (
             <ul className="hotel-image">
               {data.map((value, index) =>
@@ -25,8 +27,8 @@ class ListHotel extends React.Component {
               )}
             </ul>
           );
-          const content = data.map((data) =>
-          <div key={data.id} className="hotel-details">
+          const content = data.map((data, index) =>
+          <div key={index} className="hotel-details">
             <p>Hotel Name: {data.HotelName}</p>
             <p> Address :{data.Address}</p>
             <p> Rating :{data.Address}</p>
