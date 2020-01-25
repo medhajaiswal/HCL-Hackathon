@@ -25,8 +25,8 @@ class ListHotel extends React.Component {
               )}
             </ul>
           );
-          const content = data.map((data) =>
-          <div key={data.id} className="hotel-details">
+          const content = data.map((data, index) =>
+          <div key={index} className="hotel-details">
             <p>{data.HotelName}</p>
             <p>{data.Address}</p>
           </div>

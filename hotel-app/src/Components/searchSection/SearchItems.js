@@ -10,7 +10,7 @@ export const SearchItems = ({getHotelList}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(city != "") {
+        if(city !== "") {
             getHotelList(city, price, star);
         }
       };
