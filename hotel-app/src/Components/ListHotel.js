@@ -37,7 +37,7 @@ class ListHotel extends React.Component {
                          <Col> {sidebar}</Col>
                       <Col>{content}</Col>
                           <Col>
-                          <Button variant="secondary" size="lg">
+                          <Button variant="secondary" className="hotel-button" size="lg">
                         View Details
                      </Button>
                      <Button variant="secondary" size="lg">

@@ -6,6 +6,9 @@ ul.hotel-image {
     width:100%;
     float: left;
 }
+.hotel-button {
+    margin-bottom: 10px;
+}
 /* .hotel-details {
     float: right;
 } */
