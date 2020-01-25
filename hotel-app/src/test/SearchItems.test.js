@@ -9,8 +9,14 @@ describe('SearchItems Component', () => {
         expect(searchItemsWrapper.find('.form-data')).toHaveLength(1);
     })
 
-    it('Should haveform component', () => {
+    it('Should have form component', () => {
         const searchItemsWrapper = shallow(<SearchItems/>);
         expect(searchItemsWrapper.find(Form)).toHaveLength(1);
+    })
+
+    it('Should have form group with search-field controlId', () => {
+        const searchItemsWrapper = shallow(<SearchItems/>);
+        expect(searchItemsWrapper.find(Form)).toHaveLength(1);
+        expect(searchItemsWrapper.find(Form).props().children[0].props.controlId).toBe('search-field');
     })
 })
