@@ -24,7 +24,7 @@ function ViewDetails(props) {
               </div>
               <div style={{display:"flex",flex:0.5}}>
              </div>
-              <div style={{height:"100%",display:"flex",flex:1,flexDirection:"column"}}>
+              <div style={{height:"100%",display:"flex",flex:1,flexDirection:"column",marginTop:'5%'}}>
                   <h2>Hotel Address</h2>
                  <div style={{marginTop:"10%",width:100,height:50}}>Address :  {props.address}</div>
                  <div style={{marginTop:"5%",width:100,height:50}}>State : {props.state}</div>
