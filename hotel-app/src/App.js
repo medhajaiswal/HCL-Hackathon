@@ -2,7 +2,7 @@ import React from 'react';
 import {Header} from './Components/header/Header';
 import { SearchItems } from './Components/searchSection/SearchItems';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
        <Header/>
@@ -10,5 +10,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
