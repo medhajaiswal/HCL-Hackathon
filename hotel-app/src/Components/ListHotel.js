@@ -27,13 +27,14 @@ class ListHotel extends React.Component {
           );
           const content = data.map((data) =>
           <div key={data.id} className="hotel-details">
-            <p>{data.HotelName}</p>
-            <p>{data.Address}</p>
+            <p>Hotel Name: {data.HotelName}</p>
+            <p> Address :{data.Address}</p>
+            <p> Rating :{data.Address}</p>
           </div>
         );
         return (
             <div className="Container">
-                 <Row>
+                 <Row className="list-content">
                          <Col> {sidebar}</Col>
                       <Col>{content}</Col>
                           <Col>

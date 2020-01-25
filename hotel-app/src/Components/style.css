@@ -8,7 +8,17 @@ ul.hotel-image {
 }
 .hotel-button {
     margin-bottom: 10px;
+    display: inherit
 }
+.Container{
+    margin-top: 20px;
+    margin-left: 15px;
+    border: 1px solid black;
+}
+.list-content.row {
+    padding-top: 10px;
+}
+
 /* .hotel-details {
     float: right;
 } */

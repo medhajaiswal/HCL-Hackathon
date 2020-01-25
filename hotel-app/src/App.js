@@ -9,6 +9,7 @@ export const App = () => {
        <Header/>
        <SearchItems/>
        <ListHotel/>
+      
     </div>
   );
 }
