@@ -1,6 +1,6 @@
 import React from 'react';
-import {Header} from './component/header/Header';
-import { SearchItems } from './component/searchSection/SearchItems';
+import {Header} from './Components/header/Header';
+import { SearchItems } from './Components/searchSection/SearchItems';
 
 function App() {
   return (
