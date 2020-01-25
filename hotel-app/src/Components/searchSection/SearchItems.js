@@ -3,24 +3,15 @@ import {Form, Button, Col} from 'react-bootstrap';
 import * as constant from '../../helper/constant'
 import '../../StyleSheet/searchItems.css';
 
-export const SearchItems = () => {
-    const [validated, setValidated] = useState(false);
+export const SearchItems = ({getHotelList}) => {
     const [city, onCityChange] = useState("");
     const [price, onPriceChange] = useState("500");
     const [star, onStarChange] = useState("All");
 
     const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        } 
-        setValidated(true);
-        if(validated) {
-            console.log("city -> ", city);
-            console.log("price -> ", price);
-            console.log("star -> ", star);
-            event.preventDefault();
+        event.preventDefault();
+        if(city != "") {
+            getHotelList(city, price, star);
         }
       };
 
@@ -38,7 +29,7 @@ export const SearchItems = () => {
 
     return (
         <div className="form-data">
-            <Form noValidate validated={validated} onSubmit={(event) => handleSubmit(event)}>
+            <Form>
                 <Form.Group controlId="search-field">
                     <Form.Control type="text" placeholder={constant.SEARCH_PLACEHOLDER} required
                      onChange={(event) => handleSearchField(event)} value={city}/>
@@ -64,7 +55,7 @@ export const SearchItems = () => {
                     </Form.Group>
                 </Form.Row>
                 
-                <Button variant="primary" type="submit" className="search">
+                <Button variant="primary" type="submit" className="search" onClick={(event) => handleSubmit(event)}>
                     {constant.SEARCH}
                 </Button>
             </Form>
