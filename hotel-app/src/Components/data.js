@@ -6,7 +6,7 @@ const data= [
 id:0,
 img:pic,
 HotelName: "Taj Hotel",
-Address:"ABCC",
+Address:"9394 Brewery StreetLadson, SC 29456",
 Rating:4
 // },
 // {

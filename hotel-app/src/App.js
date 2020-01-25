@@ -3,17 +3,6 @@ import {Header} from './Components/header/Header';
 import { SearchItems } from './Components/searchSection/SearchItems';
 import ListHotel from './Components/ListHotel';
 
-<<<<<<< HEAD
-export const App = () => {
-  return (
-    <div className="App">
-       <Header/>
-       <SearchItems/>
-       <ListHotel/>
-      
-    </div>
-  );
-=======
 class App extends Component {
   constructor(props) {
     super(props);
@@ -43,7 +32,6 @@ class App extends Component {
       </div>
     );
   }
->>>>>>> 9072dced4af05c67869c87a5864fc5c0460c4ef6
 }
 
 export default App;
